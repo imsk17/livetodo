@@ -1,0 +1,9 @@
+
+<form action="#" phx-submit="add">
+    <%= text_input :todo, :title, placeholder: "Do what?" %>
+    <%= submit "Add", phx_disable_wth: "Adding ..." %>
+</form>
+
+<%= for todo <- @todos do %>
+<div> <%= todo.title %> </div>
+<%end %>
